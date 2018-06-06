@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVPArchitect</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="btn_login"><b>LOGIN</b></string>
+    <string name="game_image">Game image</string>
+</resources>
