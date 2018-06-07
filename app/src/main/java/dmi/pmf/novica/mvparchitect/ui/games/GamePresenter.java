@@ -8,8 +8,8 @@ import dmi.pmf.novica.mvparchitect.twitch.model.Top;
 
 public class GamePresenter implements GamesActivityMVP.Presenter, GamesCallback{
 
-    GamesActivityMVP.View view;
-    GamesActivityMVP.Model model;
+    private GamesActivityMVP.View view;
+    private GamesActivityMVP.Model model;
 
     public GamePresenter(GamesActivityMVP.Model model) {
         this.model = model;
