@@ -1,17 +1,17 @@
 package dmi.pmf.novica.mvparchitect.ui.login;
 
-public class MemoryRepository implements LoginRepository{
+public class MemoryRepository implements LoginRepository {
 
     private User user;
 
     @Override
     public User getUser() {
 
-        if (user == null) {
+        if (user == null) { // default user
             User user = new User("Novica", "Bjelica");
             user.setId(0);
             return user;
-        }else {
+        } else {
             return user;
         }
     }
@@ -20,7 +20,7 @@ public class MemoryRepository implements LoginRepository{
     public void saveUser(String fname, String lname) {
         if (user == null) {
             user = getUser();
-        }else{
+        } else {
             user = new User(fname, lname);
         }
     }

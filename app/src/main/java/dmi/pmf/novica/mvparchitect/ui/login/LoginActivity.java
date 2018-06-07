@@ -25,8 +25,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements LoginActivityMVP.View {
-    @Inject
-    LoginActivityMVP.Presenter presenter;
+
+    @Inject LoginActivityMVP.Presenter presenter;
 
     @BindView(R.id.et_username)
     EditText etUsername;
@@ -48,14 +48,13 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
                 presenter.loginButtonClicked();
             }
         });
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         presenter.setView(this);
-        presenter.getCurrentUser();
+        presenter.getCurrentUser(); // get default user
     }
 
     @Override

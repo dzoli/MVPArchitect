@@ -5,8 +5,8 @@ import android.support.annotation.NonNull;
 public class LoginActivityPresenter implements LoginActivityMVP.Presenter {
 
     @NonNull
-    private LoginActivityMVP.View view; //inject with method
-    private LoginActivityMVP.Model model; //inject with dagger
+    private LoginActivityMVP.View view;
+    private LoginActivityMVP.Model model;
 
     @Override
     public void setView(LoginActivityMVP.View view) {
@@ -23,7 +23,7 @@ public class LoginActivityPresenter implements LoginActivityMVP.Presenter {
             if (view.getFirstName().trim().equals("") ||
                     view.getLastName().trim().equals(""))
                 view.showInputError();
-            else{
+            else {
                 model.createUser(view.getFirstName(), view.getLastName());
                 view.showUserSavedMessage();
                 view.showTopGamesActivity();
@@ -35,21 +35,13 @@ public class LoginActivityPresenter implements LoginActivityMVP.Presenter {
     public void getCurrentUser() { // tell view to show current user
         User user = model.getUser();
 
-        if (user == null) {
-            if (view != null) {
+        if (view != null) {
+            if (user == null) {
                 view.showUserNotAvailable();
-            }
-        }else {
-            if (view != null) {
+            } else {
                 view.setFirstName(user.getFname());
                 view.setLastName(user.getLname());
             }
         }
-//        if (user != null) {
-//            if (view != null) {
-//                view.setFirstName(user.getFname());
-//                view.setLastName(user.getLname());
-//            }
-//        }
     }
 }
