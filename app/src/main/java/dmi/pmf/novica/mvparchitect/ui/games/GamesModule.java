@@ -15,19 +15,19 @@ public class GamesModule {
 
     @Provides
     @ActivityScope
-    public LinearLayoutManager provideLinearLayoutManager(@Named("activity_context") Context context){
+    public LinearLayoutManager provideLinearLayoutManager(@Named("activity_context") Context context) {
         return new LinearLayoutManager(context);
     }
 
     @Provides
     @ActivityScope
-    public GamesAdapter provideGamesAdapter(){
+    public GamesAdapter provideGamesAdapter() {
         return new GamesAdapter();
     }
 
     @Provides
     @ActivityScope
-    public GamesRepository provideNetworkRepository(TwitchAPI twitchAPI){
+    public GamesRepository provideNetworkRepository(TwitchAPI twitchAPI) {
         return new NetworkRepository(twitchAPI); // twitch is obtained from TwitchModule
     }
 

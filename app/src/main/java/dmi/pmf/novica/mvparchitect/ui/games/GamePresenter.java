@@ -6,7 +6,7 @@ import java.util.List;
 
 import dmi.pmf.novica.mvparchitect.twitch.model.Top;
 
-public class GamePresenter implements GamesActivityMVP.Presenter, GamesCallback{
+public class GamePresenter implements GamesActivityMVP.Presenter, GamesCallback {
 
     private GamesActivityMVP.View view;
     private GamesActivityMVP.Model model;

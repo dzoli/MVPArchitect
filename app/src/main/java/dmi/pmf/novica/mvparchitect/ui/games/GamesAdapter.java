@@ -14,13 +14,14 @@ import dmi.pmf.novica.mvparchitect.twitch.model.Top;
 
 public class GamesAdapter extends RecyclerView.Adapter<GameItemViewHolder> {
 
-    List<Top> gameList = new ArrayList<>();
+    private List<Top> gameList = new ArrayList<>();
 
     @NonNull
     @Override
     public GameItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_game, parent, false);
+
         return new GameItemViewHolder(v);
     }
 
@@ -34,11 +35,6 @@ public class GamesAdapter extends RecyclerView.Adapter<GameItemViewHolder> {
     @Override
     public int getItemCount() {
         return gameList.size();
-    }
-
-    public void addGame(Top top) {
-        this.gameList.add(top);
-        notifyItemInserted(getItemCount()+1);
     }
 
     public void setGameList(List<Top> gameList) {

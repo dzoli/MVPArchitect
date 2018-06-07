@@ -1,7 +1,7 @@
 package dmi.pmf.novica.mvparchitect.ui.games;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
@@ -13,17 +13,10 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import dmi.pmf.novica.mvparchitect.R;
-import dmi.pmf.novica.mvparchitect.root.ActivityModule;
 import dmi.pmf.novica.mvparchitect.root.App;
-import dmi.pmf.novica.mvparchitect.twitch.TwitchAPI;
-import dmi.pmf.novica.mvparchitect.twitch.TwitchModule;
 import dmi.pmf.novica.mvparchitect.twitch.model.Top;
-import dmi.pmf.novica.mvparchitect.twitch.model.Twitch;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
-public class TopGamesActivity extends AppCompatActivity implements GamesActivityMVP.View{
+public class TopGamesActivity extends AppCompatActivity implements GamesActivityMVP.View {
 
     @BindView(R.id.rv_games)
     RecyclerView rvGames;

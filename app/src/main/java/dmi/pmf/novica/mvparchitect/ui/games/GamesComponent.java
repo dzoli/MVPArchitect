@@ -1,11 +1,8 @@
 package dmi.pmf.novica.mvparchitect.ui.games;
 
-import javax.inject.Singleton;
-
 import dagger.Component;
 import dmi.pmf.novica.mvparchitect.root.ActivityModule;
 import dmi.pmf.novica.mvparchitect.root.ActivityScope;
-import dmi.pmf.novica.mvparchitect.root.ApplicationComponent;
 import dmi.pmf.novica.mvparchitect.twitch.TwitchModule;
 
 @Component(modules = {ActivityModule.class, GamesModule.class, TwitchModule.class})
